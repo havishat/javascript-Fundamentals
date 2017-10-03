@@ -1,0 +1,51 @@
+<html>
+<head>
+    <div id="message">
+        JSintermediate
+    </div> 
+</head>
+<body>
+    <script>
+        //part 1
+        function starString(num){
+            var y = ""
+            for(var i=0;i<num;i++){
+                y +=  "*";
+            }
+            return y;
+        }
+        let stars = starString(8)
+       // console.log(stars)
+
+        //part 2
+        function drawStars(num){
+           var y = ""
+            for(var i=0;i<num.length;i++){
+                y = starString(num[i])
+               // console.log(y)
+            }
+        }
+        let x = [4, 6, 1, 3, 5, 7, 25]
+        drawStars(x)
+
+        //part 3
+         function drawStars2(arr){
+             for(var i = 0; i<arr.length; i++){
+                 var y = ""
+                if(typeof(arr[i]) === "number") {
+                    y = starString(arr[i])
+                    console.log(y)
+                 } else if(typeof(arr[i]) === "string") {
+                    for (let j = 0; j < arr[i].length; j++) {
+                        y += arr[i][0].toLowerCase();
+                        
+                    }
+                    console.log(y)
+                 }
+             }
+        }
+        let num = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]
+        drawStars2(num)
+    </script>
+</body>
+</html>

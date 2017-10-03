@@ -1,0 +1,70 @@
+<html>
+<head>
+    <div id="message">
+        JSMath
+    </div> 
+</head>
+<body>
+    <script>
+        //Math 1 
+        function zero_negativity(x) {
+            for(let i=0;i<x.length;i++){
+                if(x[i] < 0){
+                    return false
+                }
+            }
+            return true
+        }
+        let test1 = zero_negativity([5, 2]);
+        console.log(test1);
+        let test2 = zero_negativity([5, -2]);
+        console.log(test2);
+        //Math 2 
+        function is_even(x){
+            if(x%2 === 0){
+                return true
+            } else {
+                return false
+            }
+        }
+        let y1 = is_even(16) 
+        console.log(y1);
+        let y2 = is_even(33) 
+        console.log(y2);
+
+        //Math 3
+        function how_many_even(arr){
+            var sum = 0
+            for(let i = 0;i<arr.length;i++){
+                if(is_even(arr[i])){
+                    sum += 1
+                }
+            }
+            return sum
+        }
+        let arr = how_many_even([2,4,6,5,7,8,23])
+        console.log(arr)
+
+        //Math 4
+        function create_dummy_arry(n){
+            var y = []
+           
+            for(var i =0 ; i<n;i++){
+                let x = Math.floor(Math.random() * 10);
+                y.push(x)
+            }
+            return y
+        } 
+        let cda = create_dummy_arry(4)
+        console.log(cda)
+
+        //Math 5
+        function random_choice(arr) {
+            let x = Math.floor(Math.random() * arr.length);
+            return arr[x]
+        }
+        let rc = random_choice(["hello","world",4,"coding"])
+        console.log(rc)
+    </script>
+</body>
+</html>
